@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "pvpvisual",
+	"version": "${version}",
+	"name": "PvP Visual",
+	"description": "Client-side PvP visuals: target HUD, ring crosshair, hit particles, hit sounds, jump circles, China hat, trails, pearl trail. Visual only - no gameplay changes.",
+	"authors": [
+		"You"
+	],
+	"license": "CC0-1.0",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"dev.pvpvisual.PvpVisualClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"mixins": [
+		{
+			"config": "pvpvisual.client.mixins.json",
+			"environment": "client"
+		}
+	]
+}
